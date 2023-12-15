@@ -17,11 +17,11 @@ export const NavBarComponent = () => {
             <Link to="/">Home</Link>
             <Link to="#link">Productos</Link>
             <NavDropdown title="Categorías" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">
-                <Link to={"/category/laptops"}>Laptops</Link>
+              <NavDropdown.Item>
+                <Link to={"/category/fuego"}>Fuego</Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                <Link to={"/category/smartphones"}>Smartphones</Link>
+              <NavDropdown.Item>
+                <Link to={"/category/agua"}>Agua</Link>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

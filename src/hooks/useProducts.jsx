@@ -5,6 +5,8 @@ import {
   collection,
   getDoc,
   doc,
+  query,
+  where,
 } from "firebase/firestore";
 
 export const useAllProducts = (limit) => {
@@ -44,4 +46,32 @@ export const useSingleProduct = (id) => {
   }, []);
 
   return { product, loading, error };
+};
+
+export const useAllProductsByFilter = (
+  collectionName,
+  categoryId,
+  fieldToFilter
+) => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    const db = getFirestore();
+    const collectionRef = collection(db, collectionName);
+    const categoryQuery = query(
+      collectionRef,
+      where(fieldToFilter, "==", categoryId)
+    );
+    getDocs(categoryQuery)
+      .then((res) => {
+        const data = res.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        setProducts(data);
+      })
+      .catch(() => setError(true))
+      .finally(() => setLoading(false));
+  }, [categoryId]);
+
+  return { products, loading, error };
 };
