@@ -1,6 +1,6 @@
-import { helix } from "ldrs";
+import { quantum } from "ldrs";
 export const LoaderComponent = () => {
-  helix.register();
+  quantum.register();
   return (
     <div
       style={{
@@ -9,8 +9,7 @@ export const LoaderComponent = () => {
         justifyContent: "center",
         height: "100vh",
         width: "100vw",
-      }}
-    >
+      }}>
       <l-helix size="70" speed="2.5" color="white"></l-helix>
     </div>
   );

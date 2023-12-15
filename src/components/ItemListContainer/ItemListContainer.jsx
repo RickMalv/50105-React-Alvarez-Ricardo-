@@ -11,12 +11,6 @@ export const ItemListContainer = ({ products }) => {
         width: "100vw",
         justifyContent: "space-around",
       }}>
-      {/* <button onClick={handlePseudoSubmit}>Click me</button>
-
-      <input type="text" onChange={(e) => handleName(e)} />
-      <input type="text" onChange={(e) => handleLastName(e)} />
-      <input type="text" onChange={(e) => handleAge(e)} /> */}
-
       {products.map((product) => {
         return (
           <Card key={product.id} style={{ width: "18rem", margin: 20 }}>
@@ -26,6 +20,7 @@ export const ItemListContainer = ({ products }) => {
             <Card.Body>
               <Card.Title>{product.title}</Card.Title>
               <Card.Text>{product.description}</Card.Text>
+              <Card.Text>${product.price}</Card.Text>
             </Card.Body>
           </Card>
         );
