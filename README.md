@@ -16,8 +16,6 @@ To run the project, use the command: `npm run dev`
 
 ## Features
 
-1. Based on the code provided, here are some features of your simple store:
-
 1. **Product Listing**: The store has a product listing page where all products are displayed. This is handled by the [`ItemListContainer`](command:_github.copilot.openSymbolInFile?%5B%22react-comision-50105%2Fsrc%2Fcomponents%2FItemListContainer%2FItemListContainer.jsx%22%2C%22ItemListContainer%22%5D "react-comision-50105\\src\components\ItemListContainer\ItemListContainer.jsx") component.
 
 1. **Product Detail**: Each product has a detail page where users can see more information about the product. This is handled by the [`ItemDetailContainer`](command:_github.copilot.openSymbolInFile?%5B%22react-comision-50105%2Fsrc%2Fpages%2FItemDetailContainer.jsx%22%2C%22ItemDetailContainer%22%5D "react-comision-50105\\src\pages\ItemDetailContainer.jsx") component.
